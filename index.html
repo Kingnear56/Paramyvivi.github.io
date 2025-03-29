@@ -246,50 +246,51 @@ Como a mais bela, a mais pura, a mais gloriosa jornada.
 </p>
 </div>
 
-<footer>
-  Feito com amor eterno para Vivi - Por você, tudo.
-</footer>
-
-  </div>
-</body>
-</html>
- 
-<!-- Código do poema já feito... -->
-
-<footer>
-  Feito com amor eterno para Vivi - Por você, tudo.
-</footer>
-
-<!-- Perguntas e Respostas -->
 <div class="qa-container">
-  <h3>Vamos fazer algumas perguntas? Responda abaixo!</h3>
-  <div class="answer-box">
-    <label for="q1">1. O que você mais gosta em mim?</label><br>
-    <input type="text" id="q1" placeholder="Sua resposta aqui...">
-  </div>
-  <div class="answer-box">
-    <label for="q2">2. Qual seu maior sonho para nós dois?</label><br>
-    <input type="text" id="q2" placeholder="Sua resposta aqui...">
-  </div>
-  <div class="answer-box">
-    <label for="q3">3. O que faz você mais feliz?</label><br>
-    <input type="text" id="q3" placeholder="Sua resposta aqui...">
-  </div>
-  <button onclick="showAnswers()">Enviar Respostas</button>
-
-  <div id="answers"></div>
+  <h3>Agora me responda, meu amor:</h3>
+  <form action="https://formspree.io/f/mqapddaw" method="POST">
+    <div class="answer-box">
+      <label for="q1">1. O que você mais gosta em mim?</label><br>
+      <textarea id="q1" name="resposta1" placeholder="Escreva aqui..." required></textarea>
+    </div>
+    <div class="answer-box">
+      <label for="q2">2. Qual seu maior sonho para nós dois?</label><br>
+      <textarea id="q2" name="resposta2" placeholder="Escreva aqui..." required></textarea>
+    </div>
+    <div class="answer-box">
+      <label for="q3">3. O que faz você mais feliz?</label><br>
+      <textarea id="q3" name="resposta3" placeholder="Escreva aqui..." required></textarea>
+    </div>
+    <button type="submit">Enviar Respostas</button>
+  </form>
 </div>
 
-<script>
-  function showAnswers() {
-    var answer1 = document.getElementById('q1').value;
-    var answer2 = document.getElementById('q2').value;
-    var answer3 = document.getElementById('q3').value;
-
-    var answersDiv = document.getElementById('answers');
-    answersDiv.innerHTML = '<h2>Suas Respostas:</h2>';
-    answersDiv.innerHTML += '<p><strong>1. O que você mais gosta em mim?</strong> ' + answer1 + '</p>';
-    answersDiv.innerHTML += '<p><strong>2. Qual seu maior sonho para nós dois?</strong> ' + answer2 + '</p>';
-    answersDiv.innerHTML += '<p><strong>3. O que faz você mais feliz?</strong> ' + answer3 + '</p>';
+<style>
+  .qa-container {
+    margin-top: 50px;
+    background-color: #fff8f0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
-</script>
+  .qa-container textarea {
+    width: 100%;
+    min-height: 80px;
+    resize: vertical;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+  }
+  .qa-container button {
+    padding: 10px 20px;
+    background-color: #a0522d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .qa-container button:hover {
+    background-color: #804020;
+  }
+</style>
